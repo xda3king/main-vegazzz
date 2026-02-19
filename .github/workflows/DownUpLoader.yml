@@ -63,15 +63,13 @@ jobs:
       run: |
         mkdir drive1 && cd drive
         wget ${{ github.event.inputs.FILE_LINK1 }}
-        ls
-        echo "FILE_ID=$(ls)" >> $GITHUB_ENV
+
     - name: Downloading file Num2
       continue-on-error: true
       run: |
         mkdir drive && cd drive
         wget ${{ github.event.inputs.FILE_LINK2 }}
-        ls
-        echo "FILE_ID=$(ls)" >> $GITHUB_ENV
+
     - name: Downloading file Num3
       continue-on-error: true
       run: |
@@ -84,22 +82,19 @@ jobs:
       run: |
         mkdir drive && cd drive
         wget ${{ github.event.inputs.FILE_LINK4 }}
-        ls
-        echo "FILE_ID=$(ls)" >> $GITHUB_ENV
+
     - name: Downloading file Num5
       continue-on-error: true
       run: |
         mkdir drive && cd drive
         wget ${{ github.event.inputs.FILE_LINK5 }}
-        ls
-        echo "FILE_ID=$(ls)" >> $GITHUB_ENV
+
     - name: Downloading file Num6
       continue-on-error: true
       run: |
         mkdir drive && cd drive
         wget ${{ github.event.inputs.FILE_LINK6 }}
-        ls
-        echo "FILE_ID=$(ls)" >> $GITHUB_ENV
+
     - name: Downloading file Num7
       continue-on-error: true
       run: |
@@ -111,24 +106,19 @@ jobs:
       run: |
         mkdir drive && cd drive
         wget ${{ github.event.inputs.FILE_LINK8 }}
-        ls
-        echo "FILE_ID=$(ls)" >> $GITHUB_ENV
+
     - name: Downloading file Num9
       continue-on-error: true
       run: |
         mkdir drive && cd drive
         wget ${{ github.event.inputs.FILE_LINK9 }}
-        ls
-        echo "FILE_ID=$(ls)" >> $GITHUB_ENV
+
     - name: Downloading file Num10
       continue-on-error: true
       run: |
         mkdir drive && cd drive
         wget ${{ github.event.inputs.FILE_LINK10 }}
-        ls
-        echo "FILE_ID=$(ls)" >> $GITHUB_ENV
         
-
     - name: Set Build Date 
       run: |
         echo "BUILD_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
@@ -139,6 +129,6 @@ jobs:
       with:
         files: |
           drive/*.*
-        name: ${{ env.FILE_ID }} // ${{ env.BUILD_DATE }}
+        name: ${{ github.event.inputs.TEXT_MSG }} // ${{ env.BUILD_DATE }}
         tag_name: ${{ github.run_id }}
         body: |
