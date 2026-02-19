@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       TEXT_MSG:
-        description: 'Link of File'
+        description: 'Your Reminder Massage'
         required: true
         default: 'Massage'
       FILE_LINK1:
