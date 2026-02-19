@@ -8,45 +8,45 @@ on:
         required: true
         default: 'MSGZZZZ'
       FILE_LINK1:
-        description: 'Link of File'
+        description: 'Link of File1'
         required: true
-        default: ''
+        default: 'Empty'
       FILE_LINK2:
-        description: 'Link of File'
+        description: 'Link of File2'
         required: true
-        default: ''
+        default: 'Empty'
       FILE_LINK3:
-        description: 'Link of File'
+        description: 'Link of File3'
         required: true
-        default: ''
+        default: 'Empty'
       FILE_LINK4:
-        description: 'Link of File'
+        description: 'Link of File4'
         required: true
-        default: ''
+        default: 'Empty'
       FILE_LINK5:
-        description: 'Link of File'
+        description: 'Link of File5'
         required: true
-        default: ''
+        default: 'Empty'
       FILE_LINK6:
-        description: 'Link of File'
+        description: 'Link of File6'
         required: true
-        default: ''
+        default: 'Empty'
       FILE_LINK7:
-        description: 'Link of File'
+        description: 'Link of File7'
         required: true
-        default: ''
+        default: 'Empty'
       FILE_LINK8:
-        description: 'Link of File'
+        description: 'Link of File8'
         required: true
-        default: ''
+        default: 'Empty'
       FILE_LINK9:
-        description: 'Link of File'
+        description: 'Link of File9'
         required: true
-        default: ''
+        default: 'Empty'
       FILE_LINK10:
-        description: 'Link of File'
+        description: 'Link of File10'
         required: true
-        default: ''
+        default: 'Empty'
 
 jobs:
   build:
