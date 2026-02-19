@@ -61,13 +61,13 @@ jobs:
     - name: Downloading file Num1
       continue-on-error: true
       run: |
-        mkdir drive && cd drive
+        mkdir drive1 && cd drive1
         wget ${{ github.event.inputs.FILE_LINK1 }}
 
     - name: Downloading file Num2
       continue-on-error: true
       run: |
-        cd drive
+        mkdir drive2 && cd drive2
         wget ${{ github.event.inputs.FILE_LINK2 }}
 
     - name: Downloading file Num3
@@ -129,7 +129,8 @@ jobs:
       continue-on-error: true
       with:
         files: |
-          drive/*.*
+          drive1/*.*
+          drive2/*.*
         name: ${{ github.event.inputs.TEXT_MSG }} // ${{ env.BUILD_DATE }}
         tag_name: ${{ github.run_id }}
         body: |
