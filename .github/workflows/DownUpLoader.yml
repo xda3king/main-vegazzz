@@ -130,6 +130,6 @@ jobs:
       with:
         files: |
           drive/*.*
-        name: ${{ github.event.inputs.TEXT_MSG }} // ${{ env.BUILD_DATE }}
-        tag_name: ${{ github.run_id }}
+        name: ${{ github.event.inputs.TEXT_MSG }}
+        tag_name: ${{ env.BUILD_DATE }}
         body: |
